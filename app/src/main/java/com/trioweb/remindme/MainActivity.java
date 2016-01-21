@@ -36,5 +36,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void initNavigationView() {
         this.drawerLayout = (DrawerLayout) this.findViewById(R.id.drawer_layout);
+
     }
 }
