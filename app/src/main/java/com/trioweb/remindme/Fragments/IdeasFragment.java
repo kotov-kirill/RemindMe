@@ -1,18 +1,20 @@
-package com.trioweb.remindme;
+package com.trioweb.remindme.Fragments;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.trioweb.remindme.R;
 
 /**
  * Created on 22.01.2016.
  * @author Rakov Kirill
  */
 
-public class ExampleFragment extends Fragment{
+public class IdeasFragment extends AbstractTabFragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -20,10 +22,12 @@ public class ExampleFragment extends Fragment{
         return view;
     }
 
-    public static ExampleFragment getInstance(){
+    public static IdeasFragment getInstance(Context context){
         Bundle bundle = new Bundle();
-        ExampleFragment fragment = new ExampleFragment();
+        IdeasFragment fragment = new IdeasFragment();
         fragment.setArguments(bundle);
+        fragment.setContext(context);
+        fragment.setTitle(context.getString(R.string.tab_item_ideas));
         return fragment;
     }
 }
